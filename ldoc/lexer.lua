@@ -276,7 +276,9 @@ function lexer.get_keywords ()
             ["if"] = true, ["in"] = true,  ["local"] = true, ["nil"] = true,
             ["not"] = true, ["or"] = true, ["repeat"] = true,
             ["return"] = true, ["then"] = true, ["true"] = true,
-            ["until"] = true,  ["while"] = true
+            ["until"] = true,  ["while"] = true,
+
+            ["continue"] = true, ["goto"] = true,
         }
     end
     return lua_keyword
@@ -311,6 +313,9 @@ function lexer.lua(s,filter,options)
             {'^~=',tdump},
             {'^<=',tdump},
             {'^>=',tdump},
+            {'^!=',tdump},
+            {'^&&',tdump},
+            {'^||',tdump},
             {'^%.%.%.',tdump},
             {'^%.%.',tdump},
             {'^.',tdump}
