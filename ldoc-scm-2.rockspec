@@ -1,21 +1,22 @@
-package = "ldoc"
+package = "gldoc"
 version = "scm-2"
 
 source = {
   dir="LDoc",
-  url = "git+https://github.com/stevedonovan/LDoc.git"
+  url = "git+https://github.com/xaviergmail/GLDoc.git"
 }
 
 description = {
-  summary = "A Lua Documentation Tool",
+  summary = "A Lua Documentation Tool for Garry's Mod Lua",
   detailed = [[
+   GLDoc is LDoc made compatible with Garry's Mod Lua.
    LDoc is a LuaDoc-compatible documentation generator which can also
    process C extension source. Markdown may be optionally used to
    render comments, as well as integrated readme documentation and
    pretty-printed example files
   ]],
-  homepage='http://stevedonovan.github.com/ldoc',
-  maintainer='steve.j.donovan@gmail.com',
+  homepage='https://github.com/xaviergmail/GLDoc',
+  maintainer='xavier.bergeron@forgerstudios.com',
   license = "MIT/X11",
 }
 
@@ -59,7 +60,7 @@ build = {
   copy_directories = {'doc','tests'},
   install = {
     bin = {
-      ldoc = "ldoc.lua"
+      gldoc = "ldoc.lua"
     }
   }
 }

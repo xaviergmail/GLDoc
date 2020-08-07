@@ -1,4 +1,13 @@
-# LDoc - A Lua Documentation Tool
+# GLDoc - A Lua Documentation Tool
+
+## What?
+This is a fork of [LDoc](https://github.com/stevedonovan/LDoc) that adds support for Garry's Mod-flavored Lua.
+
+It also adds some new features, such as:
+- A dark theme based off "`Tomorrow Night Eighties`"
+- `@warn` to add `Warning:` blocks to function descriptions
+
+You can see example usage of it on my [XLib repo](https://github.com/xaviergmail/xlib)
 
 Copyright (C) 2011-2012 Steve Donovan.
 
