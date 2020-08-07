@@ -370,6 +370,7 @@ local function parse_file(fname, lang, package, args)
             if not module_found or module_found == '...' then
                -- we have to guess the module name
                module_found = tools.this_module_name(package,fname)
+               if not module_found then break end
             end
             if not tags then tags = extract_tags(comment,args) end
             add_module(tags,module_found,old_style)

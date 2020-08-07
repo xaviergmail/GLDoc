@@ -266,9 +266,12 @@ function M.this_module_name (basename,fname)
    end
    local lpath,cnt = fname:gsub('^'..utils.escape(basename),'')
    --print('deduce',lpath,cnt,basename)
-   if cnt ~= 1 then quit("module(...) name deduction failed: base "..basename.." "..fname) end
-   lpath = lpath:gsub(path.sep,'.')
-   return (M.name_of(lpath):gsub('%.init$',''))
+   if cnt ~= 1 then
+      print("module(...) name deduction failed: base "..basename.." "..fname)
+   else
+      lpath = lpath:gsub(path.sep,'.')
+      return (M.name_of(lpath):gsub('%.init$',''))
+   end
 end
 
 function M.find_existing_module (name, dname, searchfn)
