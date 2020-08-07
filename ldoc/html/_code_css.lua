@@ -1,4 +1,9 @@
 return [[
+pre.warn {
+    border: 1px solid hsl(0 56% 15% / 1);
+    background: hsl(0 34% 32% / 1);
+    font-family: arial;
+}
 
 /* styles for prettification of source */
 pre .comment { color: #558817; }

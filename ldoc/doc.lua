@@ -27,6 +27,7 @@ local known_tags = {
    class = 'id', name = 'id', pragma = 'id', alias = 'id',
    copyright = 'S', summary = 'S', description = 'S', release = 'S', license = 'S',
    fixme = 'S', todo = 'S', warning = 'S', raise = 'S', charset = 'S', within = 'S',
+   warn = 'ML',
    ['local'] = 'N', export = 'N', private = 'N', constructor = 'N', static = 'N',include = 'S',
    -- project-level
    module = 'T', script = 'T', example = 'T', topic = 'T', submodule='T', classmod='T', file='T',
@@ -623,6 +624,7 @@ function Item:finish()
    self.type = read_del(tags,'class')
    self.modifiers = extract_tag_modifiers(tags)
    self.usage = read_del(tags,'usage')
+   self.warn = read_del(tags, 'warn')
    tags.see = read_del(tags,'see')
    if tags.see then
       tags.see = tools.identifier_list(tags.see)
